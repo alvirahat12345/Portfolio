@@ -112,6 +112,7 @@ body {
     font-size: 1.5rem;
     line-height: 1.6rem;
     margin-bottom: 0;
+    text-align: center; /* Center the title */
 }
 
 .line {

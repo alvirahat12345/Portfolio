@@ -10,8 +10,7 @@ body {
     margin: 0;
 }
 
-
-/* Navbar: Increased the size of navbar */
+/* Navbar: Increased the size of navbar for small devices */
 .navbar {
     position: sticky;
     top: 0;
@@ -19,7 +18,7 @@ body {
     backdrop-filter: blur(4px);
     background-color: rgba(34, 34, 34, 0.25);
     border-bottom: 1px solid #333;
-    padding: 1.5rem 0; /* Increased padding for a larger navbar */
+    padding: 1rem 0; /* Default padding */
 }
 
 .navbar-container {
@@ -63,17 +62,34 @@ body {
     color: rgb(243, 165, 9);
 }
 
-@media (max-width:873px) {
-    .navbar-container {
-        display: block;
+/* Mobile (small devices) - Increase navbar height and other relevant sizes */
+@media (max-width: 873px) {
+    .navbar {
+        padding: 1.5rem 0; /* Increased padding for mobile devices */
     }
-    .nav-items-container {
-        padding: 0px;
+
+    .nav-name {
+        font-size: 36px; /* Larger font size for smaller screens */
+    }
+
+    .nav-items-link {
+        font-size: 22px; /* Larger font size for navbar links on mobile */
+    }
+
+    .hero-image {
+        height: 500px; /* Larger hero image for small devices */
+    }
+
+    footer {
+        padding: 2.5rem 1rem; /* Larger footer padding for small devices */
+    }
+
+    .footer-link {
+        font-size: 2.5rem; /* Larger footer link font size for small devices */
     }
 }
 
-
-/* Hero: Increased the size of the hero image */
+/* Hero Section */
 .hero-container {
     display: flex;
     flex-wrap: wrap;
@@ -87,7 +103,7 @@ body {
 .certificates-logo,
 .project-image {
     max-width: 100%;
-    height: 450px; /* Increased height of the hero image */
+    height: 450px; /* Default height for hero image */
     margin: 0 auto;
     display: block;
 }
@@ -471,11 +487,11 @@ progress::-webkit-progress-bar {
 }
 
 
-/* Footer Section: Increased the size of footer */
+/* Footer Section */
 footer {
     background-color: #333;
     color: #d5d5d5;
-    padding: 3rem 1rem; /* Increased padding for a larger footer */
+    padding: 2rem 1rem; /* Kept padding as before */
 }
 
 .footer-container {
@@ -483,7 +499,7 @@ footer {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    gap: 3rem; /* Increased gap between footer items */
+    gap: 3rem;
 }
 
 .social-links {
@@ -493,7 +509,7 @@ footer {
 
 .footer-link {
     color: #d5d5d5;
-    font-size: 2rem; /* Increased font size for footer links */
+    font-size: 2rem; /* Kept footer link size as before */
     text-decoration: none;
     transition: color 0.3s ease-in-out;
 }

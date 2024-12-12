@@ -12,7 +12,6 @@ body {
 
 
 /* Navbar */
-
 .navbar {
     position: sticky;
     top: 0;
@@ -59,21 +58,27 @@ body {
 }
 
 .nav-items-link:hover {
-    color:rgb(243, 165, 9);
+    color: rgb(243, 165, 9);  /* Vibrant orange */
 }
 
-@media (max-width:873px) {
+@media (max-width: 873px) {
     .navbar-container {
         display: block;
+        padding: 1rem;  /* Adjusting for better spacing on smaller screens */
     }
+
+    .nav-left {
+        justify-content: center;
+    }
+
     .nav-items-container {
-        padding: 0px;
+        padding: 0;
+        text-align: center;
     }
 }
 
 
 /* Hero */
-
 .hero-container {
     display: flex;
     flex-wrap: wrap;
@@ -119,7 +124,6 @@ body {
 
 
 /* Education */
-
 .education-container,
 .certificates-container,
 .skills-container,
@@ -295,7 +299,7 @@ body {
 
 .certificate-link:hover {
     text-decoration: underline;
-    color: #ffd700; /* Lighter orange on hover */
+    color: rgb(243, 165, 9); /* Vibrant orange on hover */
 }
 
 /* Responsive Adjustments */
@@ -349,11 +353,11 @@ body {
     width: 100%;
     border: 2px solid #444;
     border-radius: 0.5rem;
-    accent-color: rgb(243, 165, 9); /* Updated progress bar color */
+    background-color: rgb(243, 165, 9);  /* Updated to consistent color */
 }
 
 progress::-webkit-progress-value {
-    background-color: rgb(243, 165, 9); /* Progress bar fill color */
+    background-color: rgb(243, 165, 9); /* Vibrant orange for progress fill */
 }
 
 progress::-webkit-progress-bar {
@@ -434,6 +438,7 @@ progress::-webkit-progress-bar {
 
 .project-link:hover {
     text-decoration: underline;
+    color: rgb(243, 165, 9);  /* Vibrant orange on hover */
 }
 
 
@@ -570,38 +575,11 @@ footer {
 
 .footer-link {
     color: #d5d5d5;
-    font-size: 1rem; /* Use rem for better scaling */
+    font-size: 1.5rem;
     text-decoration: none;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease;
 }
 
 .footer-link:hover {
-    color: #fff; /* Change color on hover */
-}
-
-.footer-text {
-    text-align: center;
-    font-size: 0.875rem; /* Slightly smaller text for copyright */
-}
-
-@media (max-width: 576px) {
-    .footer-container {
-        flex-direction: column; /* Stack elements vertically on small screens */
-        text-align: center;
-    }
-}
-
-@media (min-width: 576px) {
-    .footer-container {
-        flex-direction: row; /* Keep links in a row on larger screens */
-    }
-}
-
-@media (max-width: 992px) {
-    .footer-container {
-        text-align: center; /* Center the text and links for smaller screens */
-    }
-    .footer-link {
-        margin-bottom: 0.5rem; /* Space out links on mobile */
-    }
+    color: rgb(243, 165, 9); /* Vibrant orange on hover */
 }

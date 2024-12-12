@@ -11,7 +11,7 @@ body {
 }
 
 
-/* Navbar */
+/* Navbar: Increased the size of navbar */
 .navbar {
     position: sticky;
     top: 0;
@@ -19,7 +19,7 @@ body {
     backdrop-filter: blur(4px);
     background-color: rgba(34, 34, 34, 0.25);
     border-bottom: 1px solid #333;
-    padding: 1rem 0; /* Increase padding for more height */
+    padding: 1.5rem 0; /* Increased padding for a larger navbar */
 }
 
 .navbar-container {
@@ -38,7 +38,7 @@ body {
 }
 
 .nav-name {
-    font-size: 24px; /* Increased font size */
+    font-size: 30px; /* Increased font size for nav name */
     line-height: 1.5rem;
     letter-spacing: 0.2rem;
 }
@@ -56,47 +56,38 @@ body {
 
 .nav-items-link {
     text-decoration: none;
-    font-size: 18px; /* Increased font size for nav items */
+    font-size: 20px; /* Increased font size for navbar links */
 }
 
 .nav-items-link:hover {
-    color: rgb(243, 165, 9);  /* Vibrant orange */
+    color: rgb(243, 165, 9);
 }
 
-@media (max-width: 873px) {
+@media (max-width:873px) {
     .navbar-container {
         display: block;
-        padding: 1rem;  /* Adjusting for better spacing on smaller screens */
     }
-
-    .nav-left {
-        justify-content: center;
-    }
-
     .nav-items-container {
-        padding: 0;
-        text-align: center;
+        padding: 0px;
     }
 }
 
 
-/* Hero */
+/* Hero: Increased the size of the hero image */
 .hero-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     min-height: 100vh;
-    /* margin-top: 2rem; */
 }
 
-/* hero image, resume image, certificate image */
 .hero-image,
 .education-image,
 .certificates-logo,
 .project-image {
     max-width: 100%;
-    height: auto;
+    height: 450px; /* Increased height of the hero image */
     margin: 0 auto;
     display: block;
 }
@@ -108,7 +99,7 @@ body {
 
 .title {
     text-align: center;
-    font-size: 3rem;  /* Increased title size */
+    font-size: 3rem;
     font-weight: 400;
 }
 
@@ -119,13 +110,13 @@ body {
 
 .description {
     padding: 0 1rem;
-    font-size: 1.25rem;  /* Increased description font size */
+    font-size: 1rem;
     line-height: 2rem;
     text-align: justify;
 }
 
 
-/* Education */
+/* Education Section */
 .education-container,
 .certificates-container,
 .skills-container,
@@ -137,7 +128,7 @@ body {
 }
 
 .subtitle {
-    font-size: 2rem;  /* Increased subtitle size */
+    font-size: 1.5rem;
     line-height: 1.6rem;
     margin-bottom: 0;
 }
@@ -199,20 +190,20 @@ body {
     border-radius: 1.5rem;
     margin: 1rem 0;
     padding: 0.5rem 1.5rem;
-    font-size: 1rem;  /* Increased font size */
+    font-size: 0.875rem;
     line-height: 1.25rem;
     text-align: start;
 }
 
 .education-institution {
-    font-size: 1.25rem;  /* Increased font size */
+    font-size: 1rem;
     line-height: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
 .education-level {
     color: rgb(243, 239, 239);
-    font-size: 1rem;  /* Increased font size */
+    font-size: 0.875rem;
     line-height: 1.25rem;
     margin: 0;
     text-align:justify;
@@ -232,15 +223,14 @@ body {
     margin-top: 2rem;
 }
 
-/* Certificate Card */
 .certificate-card {
-    background: #1e1e1e; /* Dark background */
+    background: #1e1e1e;
     border-radius: 1rem;
     padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: left;
-    color: #f5f5f5; /* Light text color */
+    color: #f5f5f5;
 }
 
 .certificate-card:hover {
@@ -248,7 +238,6 @@ body {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Header Section */
 .certificate-header {
     display: flex;
     align-items: center;
@@ -257,19 +246,18 @@ body {
 }
 
 .certificate-logo {
-    width: 60px; /* Increased logo size */
-    height: 60px; /* Increased logo size */
+    width: 50px;
+    height: 50px;
     object-fit: contain;
     border-radius: 0.5rem;
-    background: #333; /* Slightly lighter background for logos */
+    background: #333;
     padding: 0.5rem;
 }
 
-/* Certificate Details */
 .certificate-name {
-    font-size: 1.5rem;  /* Increased font size */
+    font-size: 1.25rem;
     font-weight: bold;
-    color: #ffd700; /* Golden text color for emphasis */
+    color: #ffd700;
     margin: 0;
 }
 
@@ -278,32 +266,32 @@ body {
 }
 
 .certificate-org-name {
-    font-size: 1.25rem;  /* Increased font size */
+    font-size: 1rem;
     font-weight: 600;
     color: #cccccc;
     margin-bottom: 0.5rem;
 }
 
 .certificate-date {
-    font-size: 1.125rem;  /* Increased font size */
+    font-size: 0.9rem;
     color: #aaaaaa;
     margin-bottom: 1rem;
 }
 
-/* Certificate Link */
 .certificate-link {
-    font-size: 1.125rem;  /* Increased font size */
-    color: #f39c12; /* Vibrant orange for links */
+    font-size: 0.9rem;
+    color: #f39c12;
     text-decoration: none;
     font-weight: bold;
 }
 
 .certificate-link:hover {
     text-decoration: underline;
-    color: rgb(243, 165, 9); /* Vibrant orange on hover */
+    color: #ffd700;
 }
 
-/* Skills */
+
+/* Skills Section */
 .skills-sub-container {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -323,14 +311,14 @@ body {
 }
 
 .skill {
-    font-size: 16px; /* Increased font size */
+    font-size: 14px;
     color: #f5f5f5;
     font-weight: bold;
 }
 
 .percentage {
-    color: rgb(243, 165, 9); /* Updated to the requested color */
-    font-size: 14px; /* Increased font size */
+    color: rgb(243, 165, 9);
+    font-size: 12px;
 }
 
 .progress {
@@ -338,46 +326,183 @@ body {
     width: 100%;
     border: 2px solid #444;
     border-radius: 0.5rem;
-    background-color: rgb(243, 165, 9);  /* Updated to consistent color */
+    accent-color: rgb(243, 165, 9);
 }
 
 progress::-webkit-progress-value {
-    background-color: rgb(243, 165, 9); /* Vibrant orange for progress fill */
+    background-color: rgb(243, 165, 9);
 }
 
 progress::-webkit-progress-bar {
-    background-color: #333; /* Background of the progress bar */
+    background-color: #333;
 }
 
-/* Footer */
+
+/* Projects Section */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.project-list {
+    padding: 1rem;
+    border: 1px solid rgb(243, 165, 9);
+    border-radius: 1rem;
+    background-color: #222;
+    transition: background-color 0.3s ease;
+}
+
+.project-list:hover {
+    background-color: #333;
+}
+
+.project-description {
+    padding: 1rem;
+    text-align: justify;
+}
+
+.project-name {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: rgb(243, 165, 9);
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+
+/* Contact Section */
+.contact-info-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-top: 2.5rem;
+    padding: 2rem;
+    background-color: #222;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-details {
+    color: #fff;
+    padding: 1rem;
+    border-right: 2px solid #444;
+}
+
+.contact-details h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: rgb(243, 165, 9);
+}
+
+.contact-details a, 
+.contact-details p {
+    display: block;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #ddd;
+}
+
+.contact-details a:hover {
+    color: rgb(243, 165, 9);
+    text-decoration: underline;
+}
+
+.contact-form h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: rgb(243, 165, 9);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.input-field {
+    background-color: #333;
+    border: 2px solid #555;
+    border-radius: 0.5rem;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: rgb(243, 165, 9);
+    background-color: #444;
+}
+
+.contact-button {
+    background-color: rgb(243, 165, 9);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-button:hover {
+    background-color: #f39c12;
+    transform: scale(1.05);
+}
+
+
+/* Footer Section: Increased the size of footer */
 footer {
-    background-color: #333; /* Dark background to contrast with the text */
+    background-color: #333;
     color: #d5d5d5;
-    padding: 2rem 1rem; /* Added padding for better spacing */
+    padding: 3rem 1rem; /* Increased padding for a larger footer */
 }
 
 .footer-container {
     display: flex;
-    flex-wrap: wrap; /* Allow for stacking in smaller screens */
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem; /* Added space between elements */
-    max-width: 1200px;
-    margin: 0 auto;
+    gap: 3rem; /* Increased gap between footer items */
 }
 
 .social-links {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .footer-link {
     color: #d5d5d5;
-    font-size: 1.75rem; /* Increased font size */
+    font-size: 2rem; /* Increased font size for footer links */
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease-in-out;
 }
 
 .footer-link:hover {
-    color: rgb(243, 165, 9); /* Vibrant orange on hover */
+    color: #fff;
+}
+
+.footer-text {
+    text-align: center;
+    font-size: 1rem; /* Slightly larger text for copyright */
 }

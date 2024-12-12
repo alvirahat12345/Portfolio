@@ -1,7 +1,9 @@
+/* Global styles */
 * {
     font-family: "Lato", sans-serif;
     color: white;
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 body {
@@ -69,6 +71,13 @@ body {
     justify-content: space-between;
     align-items: center;
     min-height: 100vh;
+    padding: 2rem;
+}
+
+.hero-left,
+.hero-right {
+    width: 100%;
+    text-align: center;
 }
 
 .hero-image {
@@ -76,23 +85,13 @@ body {
     height: auto;
     margin: 0 auto;
     display: block;
-    max-height: 600px;  /* Default for large screens */
-}
-
-.hero-left,
-.hero-right {
-    width: 100%;
+    max-height: 600px;
 }
 
 .title {
-    text-align: center;
-    font-size: 4rem; /* Large on large screens */
-    font-weight: 400;
-}
-
-.hero-container .title {
     text-align: left;
-    padding-left: 1rem;
+    font-size: 4rem;
+    font-weight: 400;
 }
 
 .description {
@@ -102,12 +101,8 @@ body {
     text-align: justify;
 }
 
-/* Education Section */
-.education-container,
-.certificates-container,
-.skills-container,
-.projects-container,
-.contact-container {
+/* Education, Certificates, Skills, Projects and Contact Section */
+.container {
     margin-top: 1rem;
     padding: 6.5rem 1rem 0 1rem;
     min-height: 100vh;
@@ -117,13 +112,6 @@ body {
     font-size: 1.5rem;
     line-height: 1.6rem;
     margin-bottom: 0;
-}
-
-.subtitle-container>.subtitle,
-.subtitle-container>.line {
-    text-align: center;
-    margin: 0 auto;
-    display: block;
 }
 
 .line {
@@ -140,11 +128,6 @@ body {
 }
 
 /* Certificates Section */
-.certificates-container {
-    margin-top: 3rem;
-    text-align: center;
-}
-
 .certificates-sub-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -168,58 +151,6 @@ body {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
 }
 
-.certificate-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.certificate-logo {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-    border-radius: 0.5rem;
-    background: #333;
-    padding: 0.5rem;
-}
-
-.certificate-name {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: #ffd700;
-    margin: 0;
-}
-
-.certificate-body {
-    padding-top: 1rem;
-}
-
-.certificate-org-name {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #cccccc;
-    margin-bottom: 0.5rem;
-}
-
-.certificate-date {
-    font-size: 0.9rem;
-    color: #aaaaaa;
-    margin-bottom: 1rem;
-}
-
-.certificate-link {
-    font-size: 0.9rem;
-    color: #f39c12;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.certificate-link:hover {
-    text-decoration: underline;
-    color: #ffd700;
-}
-
 /* Skills */
 .skills-sub-container {
     display: grid;
@@ -230,24 +161,6 @@ body {
 
 .skills-progress-container {
     margin: 1rem 0;
-}
-
-.skills-progress {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.skill {
-    font-size: 14px;
-    color: #f5f5f5;
-    font-weight: bold;
-}
-
-.percentage {
-    color: rgb(243, 165, 9);
-    font-size: 12px;
 }
 
 .progress {
@@ -433,4 +346,115 @@ footer {
     font-size: 0.875rem;
 }
 
-/* Responsive Adjust
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-container {
+        padding: 1rem;
+    }
+
+    .hero-left,
+    .hero-right {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        font-size: 1.1rem;
+    }
+
+    .hero-image {
+        max-height: 500px;
+    }
+
+    .navbar-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-items-container {
+        margin-top: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-items-link {
+        font-size: 18px;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .hero-image {
+        max-height: 400px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-name {
+        font-size: 24px;
+    }
+
+    .nav-items-container {
+        justify-content: center;
+    }
+
+    .nav-items-link {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-image {
+        max-height: 300px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+        line-height: 1.3rem;
+    }
+
+    .footer-text {
+        font-size: 0.75rem;
+    }
+
+    .social-links {
+        flex-direction: column;
+    }
+
+    .footer-link {
+        font-size: 0.875rem;
+    }
+
+    .contact-info-container {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+    }
+
+    .contact-form form {
+        grid-template-columns: 1fr;
+    }
+}

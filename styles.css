@@ -101,114 +101,108 @@ body {
     text-align: justify;
 }
 
-/* Education, Certificates, Skills, Projects and Contact Section */
+/* Education, Certificates, Skills, Projects, and Contact Section */
 .container {
     margin-top: 1rem;
     padding: 6.5rem 1rem 0 1rem;
     min-height: 100vh;
 }
 
-.subtitle {
-    font-size: 1.5rem;
-    line-height: 1.6rem;
-    margin-bottom: 0;
-    text-align: center; /* Center the title */
+/* Subtitle and line centering */
+.subtitle-container {
+    text-align: center; /* Center the entire container */
+    margin: 0 auto;
 }
 
-.line {
+.subtitle-container > .subtitle {
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+    margin: 0;
+    text-align: center; /* Ensure title is centered */
+}
+
+.subtitle-container > .line {
     background-color: #333;
     width: 100px;
     height: 2px;
-    margin: 0.25rem 0 2rem 0;
+    margin: 0.25rem auto 2rem auto; /* Center the line */
 }
 
 .inner-line {
     background-color: rgb(243, 165, 9);
     width: 30px;
     height: 2px;
+    margin: 0 auto; /* Center the inner line */
 }
 
-/* Certificates Section */
-.certificates-container {
-    margin-top: 3rem;
-    text-align: center;
+/* Education Section Specific Fix */
+.subtitle-container.education {
+    text-align: center; /* Centers the subtitle "Education" */
+    margin-bottom: 2rem;
 }
 
-.certificates-sub-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.subtitle {
+    font-size: 2rem;
+    color: rgb(243, 165, 9); /* Change color to match the theme */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.line {
+    background-color: #333;
+    width: 100px;
+    height: 2px;
+    margin: 0.25rem auto 2rem;
+}
+
+/* Education Entries - Stack them vertically */
+.education-left {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
-/* Certificate Card */
-.certificate-card {
-    background: #1e1e1e;
-    border-radius: 1rem;
+.education-sub-container {
+    background-color: #1e1e1e;
     padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: left;
     color: #f5f5f5;
 }
 
-.certificate-card:hover {
+.education-sub-container:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
 }
 
-.certificate-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
+/* Education Titles */
+.education-company {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: rgb(243, 165, 9); /* Highlight university names */
 }
 
-.certificate-logo {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-    border-radius: 0.5rem;
-    background: #333;
-    padding: 0.5rem;
-}
-
-.certificate-name {
+.education-institution {
     font-size: 1.25rem;
-    font-weight: bold;
-    color: #ffd700;
-    margin: 0;
+    font-weight: normal;
+    margin-top: 0.5rem;
+    color: #f5f5f5;
 }
 
-.certificate-body {
-    padding-top: 1rem;
-}
-
-.certificate-org-name {
+.education-level {
     font-size: 1rem;
-    font-weight: 600;
-    color: #cccccc;
-    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    color: #ccc;
 }
 
-.certificate-date {
-    font-size: 0.9rem;
-    color: #aaaaaa;
-    margin-bottom: 1rem;
-}
-
-.certificate-link {
-    font-size: 0.9rem;
-    color: #f39c12;
-    text-decoration: none;
+/* Education Duration */
+.education-duration {
+    font-size: 1.125rem;
     font-weight: bold;
+    color: #888;
 }
-
-.certificate-link:hover {
-    text-decoration: underline;
-    color: #ffd700;
-}
-
 /* Skills Section */
 .skills-sub-container {
     display: grid;
@@ -297,6 +291,139 @@ progress::-webkit-progress-bar {
     text-decoration: underline;
 }
 
+/* Experience List */
+.experience-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Experience Item (Card) */
+.experience-item {
+    width: 320px;
+    height: auto;
+    border: 1px solid  rgb(243, 165, 9);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Role Title */
+.experience-role {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f5f5f5;
+    margin-bottom: 5px;
+}
+/* Company Name */
+.experience-company {
+    font-size: 16px;
+    color: #f5f5f5;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+/* Duration */
+.experience-duration {
+    font-size: 14px;
+    color: #f5f5f5;
+    margin-bottom: 10px;
+}
+
+/* Experience Details */
+.experience-details {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .experience-list {
+        grid-template-columns: 1fr;
+    }
+}
+/* Certificates Section */
+.certificates-sub-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Certificate Card */
+.certificate-card {
+    background: #1e1e1e;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    color: #f5f5f5;
+}
+
+.certificate-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+.certificate-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.certificate-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 0.5rem;
+    background: #333;
+    padding: 0.5rem;
+}
+
+.certificate-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #ffd700;
+    margin: 0;
+}
+
+.certificate-body {
+    padding-top: 1rem;
+}
+
+.certificate-org-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #cccccc;
+    margin-bottom: 0.5rem;
+}
+
+.certificate-date {
+    font-size: 0.9rem;
+    color: #aaaaaa;
+    margin-bottom: 1rem;
+}
+
+.certificate-link {
+    font-size: 0.9rem;
+    color: #f39c12;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.certificate-link:hover {
+    text-decoration: underline;
+    color: #ffd700;
+}
 /* Contact Section */
 .contact-info-container {
     display: grid;
@@ -319,6 +446,10 @@ progress::-webkit-progress-bar {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: rgb(243, 165, 9);
+    text-align: center; /* Center the text */
+    width: 100%; /* Ensure full width */
+    display: flex;
+    justify-content: center; /* Center align with flexbox */
 }
 
 .contact-details a, 
@@ -506,31 +637,5 @@ footer {
 
     .title {
         font-size: 1.5rem;
-    }
-
-    .description {
-        font-size: 0.9rem;
-        line-height: 1.3rem;
-    }
-
-    .footer-text {
-        font-size: 0.75rem;
-    }
-
-    .social-links {
-        flex-direction: column;
-    }
-
-    .footer-link {
-        font-size: 0.875rem;
-    }
-
-    .contact-info-container {
-        grid-template-columns: 1fr;
-        padding: 1.5rem;
-    }
-
-    .contact-form form {
-        grid-template-columns: 1fr;
     }
 }
